@@ -199,6 +199,21 @@ Target GitHub repository:
 https://github.com/pikating0214/K2076-Ivy
 ```
 
+Netlify site:
+
+```text
+https://xgk2176-ivy.netlify.app/
+```
+
+Netlify build settings:
+
+```text
+Branch to deploy: main
+Base directory: /
+Build command: Not set
+Publish directory: K2076
+```
+
 Upload structure:
 
 ```text
@@ -222,6 +237,7 @@ Important upload reminders:
 - If GitHub Desktop shows `Publish branch`, check whether the local repository is connected to the correct GitHub remote.
 - If GitHub Desktop shows `Push origin`, committed changes are ready to upload.
 - Be careful with similar repository names such as `K2076-lvy` and `K2076-Ivy`; lowercase `l` and uppercase `I` can look almost the same.
+- If Netlify shows `Page not found`, check whether `Publish directory` is set to `K2076`.
 
 ## Future Improvements
 
