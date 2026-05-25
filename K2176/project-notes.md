@@ -150,7 +150,7 @@ Scores are only shown on the device screen and are not stored.
 Open this file in a browser:
 
 ```text
-K2076/index.html
+K2176/index.html
 ```
 
 The page can be opened by double-clicking `index.html`.
@@ -184,7 +184,7 @@ Recommended publishing workflow:
 Final project folder:
 
 ```text
-/Users/miaomiaopeng/Documents/English teaching/K2076
+/Users/miaomiaopeng/Documents/English teaching/K2176
 ```
 
 GitHub Desktop local repository used for upload:
@@ -211,13 +211,14 @@ Netlify build settings:
 Branch to deploy: main
 Base directory: /
 Build command: Not set
-Publish directory: K2076
+Publish directory: K2176
+Config file: netlify.toml sets publish = "K2176"
 ```
 
 Upload structure:
 
 ```text
-K2076/
+K2176/
 ├── index.html
 └── project-notes.md
 ```
@@ -233,11 +234,11 @@ Important upload reminders:
 
 - Use one upload workflow at a time.
 - For this project, GitHub Desktop is the recommended workflow.
-- If a GitHub repository is created on the website with `README.md`, clone that repository first, then copy the final `K2076` folder into the cloned repository.
+- If a GitHub repository is created on the website with `README.md`, clone that repository first, then copy the final `K2176` folder into the cloned repository.
 - If GitHub Desktop shows `Publish branch`, check whether the local repository is connected to the correct GitHub remote.
 - If GitHub Desktop shows `Push origin`, committed changes are ready to upload.
 - Be careful with similar repository names such as `K2076-lvy` and `K2076-Ivy`; lowercase `l` and uppercase `I` can look almost the same.
-- If Netlify shows `Page not found`, check whether `Publish directory` is set to `K2076`.
+- If Netlify shows `Page not found`, check whether `Publish directory` is set to `K2176`.
 
 ## Future Improvements
 
