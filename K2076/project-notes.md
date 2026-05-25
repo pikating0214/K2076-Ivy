@@ -150,7 +150,7 @@ Scores are only shown on the device screen and are not stored.
 Open this file in a browser:
 
 ```text
-k2-letter-x-game/index.html
+K2076/index.html
 ```
 
 The page can be opened by double-clicking `index.html`.
@@ -178,6 +178,50 @@ Recommended publishing workflow:
 5. Commit changes.
 6. Push to GitHub.
 7. Let Netlify auto-deploy.
+
+## GitHub Upload Notes
+
+Final project folder:
+
+```text
+/Users/miaomiaopeng/Documents/English teaching/K2076
+```
+
+GitHub Desktop local repository used for upload:
+
+```text
+/Users/miaomiaopeng/Documents/GitHub/未命名/K2076-Ivy
+```
+
+Target GitHub repository:
+
+```text
+https://github.com/pikating0214/K2076-Ivy
+```
+
+Upload structure:
+
+```text
+K2076/
+├── index.html
+└── project-notes.md
+```
+
+Do not upload:
+
+- `.DS_Store`
+- old draft folders
+- duplicate project folders
+- API keys, tokens, or paid-service setup files
+
+Important upload reminders:
+
+- Use one upload workflow at a time.
+- For this project, GitHub Desktop is the recommended workflow.
+- If a GitHub repository is created on the website with `README.md`, clone that repository first, then copy the final `K2076` folder into the cloned repository.
+- If GitHub Desktop shows `Publish branch`, check whether the local repository is connected to the correct GitHub remote.
+- If GitHub Desktop shows `Push origin`, committed changes are ready to upload.
+- Be careful with similar repository names such as `K2076-lvy` and `K2076-Ivy`; lowercase `l` and uppercase `I` can look almost the same.
 
 ## Future Improvements
 
