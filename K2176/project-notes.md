@@ -11,6 +11,7 @@ The page is designed for 4-6 year old children who may not be able to read direc
 - Recognize uppercase `X` and lowercase `x`.
 - Hear and identify the Letter X sound through words.
 - Identify words with the X sound, such as `box`, `fox`, `ox`, and `Max`.
+- Listen to CVC or short X words and choose the matching letters, such as `f-o-x`, `b-o-x`, `s-a-x`, `t-a-x`, and `M-a-x`.
 - Notice that the X sound is different from the Q sound.
 - Practice sight words from the lesson: `came`, `after`, `ran`, `down`.
 - Review sight words: `with`, `an`.
@@ -36,7 +37,7 @@ The page is designed for 4-6 year old children who may not be able to read direc
 ## File Structure
 
 ```text
-k2-letter-x-game/
+K2176/
 ├── index.html
 └── project-notes.md
 ```
@@ -57,7 +58,7 @@ No extra images, audio files, APIs, or JavaScript libraries are required.
 
 ## Game Structure
 
-The game has 16 questions.
+The game has 21 questions.
 
 ### Level 1: Meet Letter X
 
@@ -88,6 +89,14 @@ Focus:
 
 - Practice sight words in simple story sentences
 - Use `came`, `after`, `ran`, and `down`
+
+### Level 5: X Word Listening Challenge
+
+Focus:
+
+- Listen to X words.
+- Choose the matching letters for `fox`, `box`, `sax`, `tax`, and `Max`.
+- Audio plays only the target word for each listening question.
 
 ## Audio Behavior
 
@@ -120,7 +129,7 @@ data-audio="Listen. Which word has the X sound?"
 
 ## Scoring
 
-- Total score: 16
+- Total score: 21
 - Each correct answer gives 1 star.
 - Score updates immediately after a child clicks an option.
 - The `Finish and See Score` button shows the final score panel.
@@ -129,9 +138,9 @@ data-audio="Listen. Which word has the X sound?"
 
 Score feedback:
 
-- 14-16: strong performance, 4-5 stars
-- 10-13: good progress, about 3-4 stars
-- 0-9: needs more practice, about 0-3 stars
+- 18-21: strong performance, 4-5 stars
+- 13-17: good progress, about 3-4 stars
+- 0-12: needs more practice, about 0-3 stars
 
 ## Privacy
 
@@ -162,8 +171,9 @@ The page can be opened by double-clicking `index.html`.
 3. Confirm the audio reads only the question direction.
 4. Click answer choices.
 5. Confirm answer choices do not play audio.
-6. Click `Finish and See Score`.
-7. Confirm the final score appears.
+6. In Level 5, click `Listen` and confirm the audio reads only the target word.
+7. Click `Finish and See Score`.
+8. Confirm the final score appears.
 
 ## How To Share
 
@@ -173,11 +183,9 @@ Recommended publishing workflow:
 
 1. Edit locally.
 2. Preview and test locally.
-3. Show the teacher what changed.
-4. Wait for teacher confirmation.
-5. Commit changes.
-6. Push to GitHub.
-7. Let Netlify auto-deploy.
+3. Ask Codex for upload steps if needed.
+4. The teacher manually uploads or pushes to GitHub.
+5. Let Netlify auto-deploy after GitHub is updated.
 
 ## GitHub Upload Notes
 
@@ -233,12 +241,30 @@ Do not upload:
 Important upload reminders:
 
 - Use one upload workflow at a time.
-- For this project, GitHub Desktop is the recommended workflow.
+- For this project, the teacher manually uploads or pushes to GitHub.
+- Codex should provide steps only by default, not perform the final GitHub upload.
+- If the teacher explicitly asks Codex to operate Git/Netlify, confirm the target repository and publishing impact first.
+- GitHub Desktop is the recommended manual workflow.
 - If a GitHub repository is created on the website with `README.md`, clone that repository first, then copy the final `K2176` folder into the cloned repository.
 - If GitHub Desktop shows `Publish branch`, check whether the local repository is connected to the correct GitHub remote.
 - If GitHub Desktop shows `Push origin`, committed changes are ready to upload.
 - Be careful with similar repository names such as `K2076-lvy` and `K2076-Ivy`; lowercase `l` and uppercase `I` can look almost the same.
 - If Netlify shows `Page not found`, check whether `Publish directory` is set to `K2176`.
+
+Manual GitHub Desktop upload steps:
+
+1. Open GitHub Desktop.
+2. Select the local repository:
+
+```text
+/Users/miaomiaopeng/Documents/GitHub/未命名/K2076-Ivy
+```
+
+3. Check the changed files.
+4. Write a short summary.
+5. Click `Commit to main`.
+6. Click `Push origin`.
+7. Wait for Netlify to auto-deploy.
 
 ## Future Improvements
 

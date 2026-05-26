@@ -529,7 +529,7 @@
     </section>
 
     <section class="scorebar" aria-live="polite">
-      <div class="score">⭐ <span id="score">0</span> / 16</div>
+      <div class="score">⭐ <span id="score">0</span> / 21</div>
       <div class="progress" aria-label="score progress"><div class="progress-fill" id="progressFill"></div></div>
       <div id="rank">Start!</div>
     </section>
@@ -750,12 +750,77 @@
       </div>
     </section>
 
+    <section class="panel level">
+      <div class="level-title">
+        <div>
+          <h2>Level 5: X Word Listening Challenge</h2>
+          <p>Listen to the word. Choose the letters you hear.</p>
+        </div>
+        <span class="badge">5 stars</span>
+      </div>
+
+      <div class="question" data-answer="f-o-x" data-audio="fox">
+        <div class="prompt"><span class="num">17</span>Listen. Choose the letters.</div>
+        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
+        <div class="options">
+          <button class="option" type="button">f-o-x</button>
+          <button class="option" type="button">f-a-x</button>
+          <button class="option" type="button">f-o-t</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b-o-x" data-audio="box">
+        <div class="prompt"><span class="num">18</span>Listen. Choose the letters.</div>
+        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
+        <div class="options">
+          <button class="option" type="button">b-o-x</button>
+          <button class="option" type="button">b-a-x</button>
+          <button class="option" type="button">b-o-k</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="s-a-x" data-audio="sax">
+        <div class="prompt"><span class="num">19</span>Listen. Choose the letters.</div>
+        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
+        <div class="options">
+          <button class="option" type="button">s-a-x</button>
+          <button class="option" type="button">s-o-x</button>
+          <button class="option" type="button">s-a-t</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="t-a-x" data-audio="tax">
+        <div class="prompt"><span class="num">20</span>Listen. Choose the letters.</div>
+        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
+        <div class="options">
+          <button class="option" type="button">t-a-x</button>
+          <button class="option" type="button">t-o-x</button>
+          <button class="option" type="button">t-a-k</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="M-a-x" data-audio="Max">
+        <div class="prompt"><span class="num">21</span>Listen. Choose the letters.</div>
+        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
+        <div class="options">
+          <button class="option" type="button">M-a-x</button>
+          <button class="option" type="button">M-o-x</button>
+          <button class="option" type="button">M-a-t</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+    </section>
+
     <section class="panel result" id="resultBox">
       <div class="result-face" aria-hidden="true"><span class="result-smile"></span></div>
       <div>
         <h2 id="resultTitle">Great work!</h2>
         <div class="star-rating" id="starRating" aria-label="star rating"></div>
-        <div class="result-score">Score: <span id="finalScore">0</span> / 16 · <span id="finalStars">0</span> / 5 stars</div>
+        <div class="result-score">Score: <span id="finalScore">0</span> / 21 · <span id="finalStars">0</span> / 5 stars</div>
         <p class="result-cheer" id="resultCheer"></p>
         <p id="resultText"></p>
       </div>
@@ -773,7 +838,7 @@
   </main>
 
   <script>
-    const total = 16;
+    const total = 21;
     const scoreEl = document.getElementById("score");
     const finalScoreEl = document.getElementById("finalScore");
     const progressFill = document.getElementById("progressFill");
@@ -843,9 +908,9 @@
       finalScoreEl.textContent = correctCount;
       progressFill.style.width = `${(correctCount / total) * 100}%`;
 
-      if (correctCount >= 14) {
+      if (correctCount >= 18) {
         rankEl.textContent = "X Star!";
-      } else if (correctCount >= 10) {
+      } else if (correctCount >= 13) {
         rankEl.textContent = "Sound Hunter!";
       } else {
         rankEl.textContent = "Keep going!";
@@ -946,14 +1011,14 @@
         starRating.appendChild(star);
       }
 
-      if (score >= 14) {
+      if (score >= 18) {
         resultTitle.textContent = "Amazing! You found letter X!";
         resultCheer.textContent = "Super star listening!";
-        resultText.textContent = "You can hear the X sound in box, fox, ox, and Max.";
-      } else if (score >= 10) {
+        resultText.textContent = "You can hear and spell X words like box, fox, sax, tax, and Max.";
+      } else if (score >= 13) {
         resultTitle.textContent = "Good job! Keep practicing!";
         resultCheer.textContent = "You are getting stronger!";
-        resultText.textContent = "Say X, box, fox, ox, Max three more times.";
+        resultText.textContent = "Say and spell box, fox, sax, tax, and Max three more times.";
       } else {
         resultTitle.textContent = "Nice try! Let’s play again!";
         resultCheer.textContent = "Keep going, little sound hunter!";
