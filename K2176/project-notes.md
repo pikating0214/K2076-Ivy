@@ -20,6 +20,7 @@ The page is designed for 4-6 year old children who may not be able to read direc
 ## Important Teaching Decisions
 
 - The page is fully in English.
+- The page should work on common devices, including desktop, iPhone, iPad, and Android phones/tablets.
 - The page does not show phonetic symbols such as `/ks/` or `/kw/`.
 - Children are expected to listen for the sound, not read phonetic symbols.
 - Each question has a `Listen` button.
@@ -127,6 +128,14 @@ Example:
 data-audio="Listen. Which word has the X sound?"
 ```
 
+Android compatibility notes:
+
+- The page waits briefly for Android Chrome to load available speech voices before speaking.
+- The page calls `speechSynthesis.resume()` after a child taps `Listen`, because some Android browsers pause the speech queue.
+- The page avoids speaking immediately after `speechSynthesis.cancel()`; it waits a short moment so Android does not cancel the new audio by mistake.
+- If the preferred female voices are not available on Android, the page falls back to another English voice on the device.
+- The `Listen` button has a timeout fallback, so it returns to `Listen` even if Android does not fire the normal speech end event.
+
 ## Scoring
 
 - Total score: 21
@@ -172,8 +181,9 @@ The page can be opened by double-clicking `index.html`.
 4. Click answer choices.
 5. Confirm answer choices do not play audio.
 6. In Level 5, click `Listen` and confirm the audio reads only the target word.
-7. Click `Finish and See Score`.
-8. Confirm the final score appears.
+7. Test on Android Chrome if possible: tap `Listen` once and confirm sound starts without needing a second tap.
+8. Click `Finish and See Score`.
+9. Confirm the final score appears.
 
 ## How To Share
 
