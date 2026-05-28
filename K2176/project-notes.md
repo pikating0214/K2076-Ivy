@@ -135,6 +135,7 @@ Android compatibility notes:
 - The page avoids speaking immediately after `speechSynthesis.cancel()`; it waits a short moment so Android does not cancel the new audio by mistake.
 - If the preferred female voices are not available on Android, the page falls back to another English voice on the device.
 - The `Listen` button has a timeout fallback, so it returns to `Listen` even if Android does not fire the normal speech end event.
+- For CVC listening questions, do not use only one very short target word as the audio text. Use a complete direction such as `Choose the letters for fox.` so Android browsers can play the audio more reliably.
 
 ## Scoring
 
