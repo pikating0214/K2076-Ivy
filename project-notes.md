@@ -38,9 +38,12 @@ The page is designed for 4-6 year old children who may not be able to read direc
 ## File Structure
 
 ```text
-K2176/
+K2076-Ivy/
 ├── index.html
-└── project-notes.md
+├── project-notes.md
+├── AGENTS.md
+├── README.md
+└── netlify.toml
 ```
 
 ## Main Page
@@ -169,7 +172,7 @@ Scores are only shown on the device screen and are not stored.
 Open this file in a browser:
 
 ```text
-K2176/index.html
+index.html
 ```
 
 The page can be opened by double-clicking `index.html`.
@@ -188,7 +191,7 @@ The page can be opened by double-clicking `index.html`.
 
 ## How To Share
 
-After teacher approval, this folder can be uploaded to a GitHub repository connected to Netlify.
+After teacher approval, this repository can be uploaded to GitHub and served directly from GitHub Pages.
 
 Recommended publishing workflow:
 
@@ -196,14 +199,14 @@ Recommended publishing workflow:
 2. Preview and test locally.
 3. Ask Codex for upload steps if needed.
 4. The teacher manually uploads or pushes to GitHub.
-5. Let Netlify auto-deploy after GitHub is updated.
+5. Let GitHub Pages publish the root `index.html`.
 
 ## GitHub Upload Notes
 
 Final project folder:
 
 ```text
-/Users/miaomiaopeng/Documents/English teaching/K2176
+/Users/miaomiaopeng/Documents/GitHub/未命名/K2076-Ivy
 ```
 
 GitHub Desktop local repository used for upload:
@@ -218,28 +221,29 @@ Target GitHub repository:
 https://github.com/pikating0214/K2076-Ivy
 ```
 
-Netlify site:
+GitHub Pages site:
 
 ```text
-https://xgk2176-ivy.netlify.app/
+https://pikating0214.github.io/K2076-Ivy/
 ```
 
-Netlify build settings:
+GitHub Pages settings:
 
 ```text
-Branch to deploy: main
-Base directory: /
-Build command: Not set
-Publish directory: K2176
-Config file: netlify.toml sets publish = "K2176"
+Source: Deploy from a branch
+Branch: main
+Folder: / (root)
 ```
 
 Upload structure:
 
 ```text
-K2176/
+K2076-Ivy/
 ├── index.html
-└── project-notes.md
+├── project-notes.md
+├── AGENTS.md
+├── README.md
+└── netlify.toml
 ```
 
 Do not upload:
@@ -256,11 +260,11 @@ Important upload reminders:
 - Codex should provide steps only by default, not perform the final GitHub upload.
 - If the teacher explicitly asks Codex to operate Git/Netlify, confirm the target repository and publishing impact first.
 - GitHub Desktop is the recommended manual workflow.
-- If a GitHub repository is created on the website with `README.md`, clone that repository first, then copy the final `K2176` folder into the cloned repository.
+- If a GitHub repository is created on the website with `README.md`, clone that repository first, then copy the final root files into the cloned repository.
 - If GitHub Desktop shows `Publish branch`, check whether the local repository is connected to the correct GitHub remote.
 - If GitHub Desktop shows `Push origin`, committed changes are ready to upload.
 - Be careful with similar repository names such as `K2076-lvy` and `K2076-Ivy`; lowercase `l` and uppercase `I` can look almost the same.
-- If Netlify shows `Page not found`, check whether `Publish directory` is set to `K2176`.
+- If GitHub Pages shows `404`, check whether `index.html` is in the repository root and Pages is set to `main` / `/ (root)`.
 
 Manual GitHub Desktop upload steps:
 
@@ -275,7 +279,7 @@ Manual GitHub Desktop upload steps:
 4. Write a short summary.
 5. Click `Commit to main`.
 6. Click `Push origin`.
-7. Wait for Netlify to auto-deploy.
+7. Wait for GitHub Pages to publish.
 
 ## Future Improvements
 
