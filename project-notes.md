@@ -1,27 +1,25 @@
-# Letter X Sound Quest Project Notes
+# Letter Q Sound Quest Project Notes
 
 ## Project
 
-Letter X Sound Quest is a parent-facing and classroom-friendly HTML game for K2 DR Unit 6 Letter X, Lesson 109-110.
+Letter Q Sound Quest is a parent-facing and classroom-friendly HTML game for K2 DR Unit 6 Letter Q and the story theme The Queen.
 
 The page is designed for 4-6 year old children who may not be able to read directions independently yet.
 
 ## Learning Goals
 
-- Recognize uppercase `X` and lowercase `x`.
-- Hear and identify the Letter X sound through words.
-- Identify words with the X sound, such as `box`, `fox`, `ox`, and `Max`.
-- Listen to CVC or short X words and choose the matching letters, such as `f-o-x`, `b-o-x`, `s-a-x`, `t-a-x`, and `M-a-x`.
-- Notice that the X sound is different from the Q sound.
-- Practice sight words from the lesson: `came`, `after`, `ran`, `down`.
-- Review sight words: `with`, `an`.
-- Review story meaning from `A Box`.
+- Recognize uppercase `Q` and lowercase `q`.
+- Hear and identify the Letter Q sound in Q words.
+- Understand that Q usually appears with `u` in words such as `queen`, `quiet`, `question`, `quilt`, `quail`, and `quarter`.
+- Complete letter-sound matching for Q words.
+- Listen to short English directions and choose the correct word, sentence, or letters.
+- Practice sight words from the lesson: `saw`, `let`, `her`, and `for`.
 
 ## Important Teaching Decisions
 
 - The page is fully in English.
 - The page should work on common devices, including desktop, iPhone, iPad, and Android phones/tablets.
-- The page does not show phonetic symbols such as `/ks/` or `/kw/`.
+- The page does not show phonetic symbols such as `/kw/` to children.
 - Children are expected to listen for the sound, not read phonetic symbols.
 - Each question has a `Listen` button.
 - Audio reads only the direction/question.
@@ -31,14 +29,14 @@ The page is designed for 4-6 year old children who may not be able to read direc
 - Voice priority: `Samantha`, `Karen`, then `Google US English`.
 - The speech rate is set to `0.84`, which is slower but still natural.
 - The pitch is set to `1.05`, which keeps the voice bright and teacher-friendly.
-- Audio reads `X sound` and `Q sound` directly, matching the visible question text.
+- Audio reads `Q sound` and `X sound` directly, matching the visible question text.
 - Clicking an answer choice does not play audio.
-- The final screen shows the total score.
+- The final screen shows the total score and a 5-star rating.
 
 ## File Structure
 
 ```text
-K2076-Ivy/
+K2176-Ivy/
 ├── index.html
 ├── project-notes.md
 ├── AGENTS.md
@@ -64,43 +62,48 @@ No extra images, audio files, APIs, or JavaScript libraries are required.
 
 The game has 21 questions.
 
-### Level 1: Meet Letter X
+### Level 1: Meet Letter Q
 
 Focus:
 
-- Find uppercase `X`
-- Find lowercase `x`
-- Recognize words/sentences connected to Letter X
+- Find uppercase `Q`
+- Find lowercase `q`
+- Recognize words/sentences connected to Letter Q
 
-### Level 2: X Sound Word Hunt
+### Level 2: Q Sound Word Hunt
 
 Focus:
 
-- Identify words with the X sound
-- Practice `box`, `fox`, `ox`, and `Max`
+- Identify words that start with the Q sound
+- Practice `queen`, `quiet`, `quilt`, and `question`
+- Keep correct answer positions mixed
 
 ### Level 3: Same or Different?
 
 Focus:
 
-- Listen for the X sound
-- Distinguish X sound words from Q sound words
-- Identify where the X sound appears in a word
+- Listen for the Q sound
+- Distinguish Q sound words from X sound words
+- Identify where the Q sound appears in `queen`
+- Keep correct answer positions mixed
 
-### Level 4: Story Path
-
-Focus:
-
-- Practice sight words in simple story sentences
-- Use `came`, `after`, `ran`, and `down`
-
-### Level 5: X Word Listening Challenge
+### Level 4: Picture Word Match
 
 Focus:
 
-- Listen to X words.
-- Choose the matching letters for `fox`, `box`, `sax`, `tax`, and `Max`.
-- Audio plays only the target word for each listening question.
+- Use simple built-in picture prompts to support meaning
+- Practice `queen`, `quiet`, and `question`
+- Use meaningful distractor words and sentences
+
+### Level 5: Q Word Listening Challenge
+
+Focus:
+
+- Listen to complete directions for Q words.
+- Choose the matching letters for `queen`, `quiet`, `quilt`, `quail`, and `quarter`.
+- Each question has only one `qu` answer choice.
+- Other answer choices are meaningful words, not fake words.
+- Audio uses a complete direction such as `Choose the letters for queen.`
 
 ## Audio Behavior
 
@@ -128,7 +131,7 @@ Each question has a `data-audio` direction. The `Listen` button reads only this 
 Example:
 
 ```html
-data-audio="Listen. Which word has the X sound?"
+data-audio="Which word starts with the Q sound?"
 ```
 
 Android compatibility notes:
@@ -138,7 +141,7 @@ Android compatibility notes:
 - The page avoids speaking immediately after `speechSynthesis.cancel()`; it waits a short moment so Android does not cancel the new audio by mistake.
 - If the preferred female voices are not available on Android, the page falls back to another English voice on the device.
 - The `Listen` button has a timeout fallback, so it returns to `Listen` even if Android does not fire the normal speech end event.
-- For CVC listening questions, do not use only one very short target word as the audio text. Use a complete direction such as `Choose the letters for fox.` so Android browsers can play the audio more reliably.
+- For listening questions, do not use only one very short target word as the audio text. Use a complete direction such as `Choose the letters for queen.` so Android browsers can play the audio more reliably.
 
 ## Scoring
 
@@ -181,13 +184,15 @@ The page can be opened by double-clicking `index.html`.
 
 1. Open `index.html`.
 2. Click several `Listen` buttons.
-3. Confirm the audio reads only the question direction.
-4. Click answer choices.
-5. Confirm answer choices do not play audio.
-6. In Level 5, click `Listen` and confirm the audio reads only the target word.
-7. Test on Android Chrome if possible: tap `Listen` once and confirm sound starts without needing a second tap.
-8. Click `Finish and See Score`.
-9. Confirm the final score appears.
+3. Confirm every question has audio.
+4. Confirm the audio reads only the question direction.
+5. Click answer choices.
+6. Confirm answer choices do not play audio.
+7. In Level 4, confirm the picture prompts display on desktop and mobile.
+8. In Level 5, click `Listen` and confirm the audio uses a complete direction.
+9. Test on Android Chrome if possible: tap `Listen` once and confirm sound starts without needing a second tap.
+10. Click `Finish and See Score`.
+11. Confirm the final score appears.
 
 ## How To Share
 
@@ -209,6 +214,8 @@ Final project folder:
 /Users/miaomiaopeng/Documents/GitHub/未命名/K2076-Ivy
 ```
 
+Note: the local folder name may still be `K2076-Ivy` on this computer, but the GitHub repository name is `K2176-Ivy`.
+
 GitHub Desktop local repository used for upload:
 
 ```text
@@ -218,13 +225,13 @@ GitHub Desktop local repository used for upload:
 Target GitHub repository:
 
 ```text
-https://github.com/pikating0214/K2076-Ivy
+https://github.com/pikating0214/K2176-Ivy
 ```
 
 GitHub Pages site:
 
 ```text
-https://pikating0214.github.io/K2076-Ivy/
+https://pikating0214.github.io/K2176-Ivy/
 ```
 
 GitHub Pages settings:
@@ -238,7 +245,7 @@ Folder: / (root)
 Upload structure:
 
 ```text
-K2076-Ivy/
+K2176-Ivy/
 ├── index.html
 ├── project-notes.md
 ├── AGENTS.md
@@ -263,7 +270,7 @@ Important upload reminders:
 - If a GitHub repository is created on the website with `README.md`, clone that repository first, then copy the final root files into the cloned repository.
 - If GitHub Desktop shows `Publish branch`, check whether the local repository is connected to the correct GitHub remote.
 - If GitHub Desktop shows `Push origin`, committed changes are ready to upload.
-- Be careful with similar repository names such as `K2076-lvy` and `K2076-Ivy`; lowercase `l` and uppercase `I` can look almost the same.
+- If GitHub Pages shows an old page, try a hard refresh or add a temporary query string such as `?v=20260529`.
 - If GitHub Pages shows `404`, check whether `index.html` is in the repository root and Pages is set to `main` / `/ (root)`.
 
 Manual GitHub Desktop upload steps:
@@ -284,7 +291,7 @@ Manual GitHub Desktop upload steps:
 ## Future Improvements
 
 - Add teacher-controlled option audio for selected questions.
-- Add picture-based choices for non-readers.
-- Add a replay story section for `A Box`.
+- Add richer picture prompts if teacher provides approved images.
+- Add a replay story section for The Queen.
 - Add printable teacher answer notes separate from the student page.
 - Add a parent message template explaining the learning goals.
