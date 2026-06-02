@@ -1,6 +1,6 @@
 # K2176-Ivy
 
-Letter Q Sound Quest static HTML game.
+Letter Y Sound Quest static HTML game.
 
 GitHub Pages URL:
 

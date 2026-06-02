@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letter Q Sound Quest</title>
+  <title>Letter Y Sound Quest</title>
   <style>
     :root {
       --ink: #253047;
@@ -246,6 +246,21 @@
       opacity: 0.75;
     }
 
+    .audio-status {
+      display: none;
+      margin: 0 0 14px;
+      padding: 10px 12px;
+      border: 2px solid #f7c948;
+      border-radius: 8px;
+      background: #fff8d9;
+      color: #7c4a00;
+      font-weight: 800;
+    }
+
+    .audio-status.show {
+      display: block;
+    }
+
     .num {
       display: inline-grid;
       place-items: center;
@@ -318,6 +333,15 @@
       background: white;
       border: 3px solid #d7e3f1;
       font-size: 42px;
+    }
+
+    .lesson-image {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: white;
     }
 
     .picture-label {
@@ -516,8 +540,8 @@
 <body>
   <header>
     <div class="wrap">
-      <h1>Letter Q Sound Quest</h1>
-      <p class="subtitle">K2 DR Unit 6 Letter Q · The Queen · Find Q, hear the Q sound, and help the queen.</p>
+      <h1>Letter Y Sound Quest</h1>
+      <p class="subtitle">Unit 6 Letter Y · In the Yard · Find Y, hear the Y sound, and help Yuki.</p>
     </div>
   </header>
 
@@ -526,25 +550,24 @@
       <div class="panel story-card">
         <div class="scene" aria-hidden="true">
           <svg viewBox="0 0 120 120" role="img">
-            <circle cx="60" cy="65" r="34" fill="#ffd9c7"/>
-            <path d="M30 52 Q60 18 90 52 V82 Q60 105 30 82 Z" fill="#8e6ad8"/>
-            <path d="M35 38 L48 20 L60 37 L72 20 L85 38 Z" fill="#ffd166" stroke="#d9903d" stroke-width="4"/>
-            <circle cx="49" cy="64" r="5" fill="#253047"/>
-            <circle cx="71" cy="64" r="5" fill="#253047"/>
-            <path d="M49 80 Q60 88 72 80" stroke="#253047" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <text x="43" y="115" font-size="26" font-weight="900" fill="#253047">Qq</text>
+            <circle cx="60" cy="58" r="35" fill="#ffd166"/>
+            <circle cx="60" cy="58" r="22" fill="#2477c7"/>
+            <circle cx="60" cy="58" r="10" fill="#ffd166"/>
+            <path d="M60 80 C43 94 36 98 24 101" stroke="#2477c7" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <text x="41" y="119" font-size="27" font-weight="900" fill="#253047">Yy</text>
           </svg>
         </div>
         <div>
           <h2>Story Mission</h2>
-          <p>The queen sat on a quilt. Quiet, quiet! Can you find the letter Q?</p>
+          <p>Yuki got a yellow yoyo. Yuki played with the yoyo in the yard. Can you find the letter Y?</p>
           <div class="chips">
-            <span class="chip">Qq</span>
-            <span class="chip">Q sound</span>
-            <span class="chip">queen</span>
-            <span class="chip">quiet</span>
-            <span class="chip">question</span>
-            <span class="chip">quilt</span>
+            <span class="chip">Yy</span>
+            <span class="chip">Y sound</span>
+            <span class="chip">yoyo</span>
+            <span class="chip">yard</span>
+            <span class="chip">yummy</span>
+            <span class="chip">yogurt</span>
+            <span class="chip">yarn</span>
           </div>
         </div>
       </div>
@@ -553,69 +576,68 @@
         <h2>Sight Words</h2>
         <p>Read and tap your rhythm.</p>
         <div class="word-row">
-          <span class="word-card">saw</span>
-          <span class="word-card">let</span>
-          <span class="word-card">her</span>
-          <span class="word-card">for</span>
+          <span class="word-card">got</span>
+          <span class="word-card">ate</span>
         </div>
       </div>
     </section>
 
     <section class="scorebar" aria-live="polite">
-      <div class="score">⭐ <span id="score">0</span> / 21</div>
+      <div class="score">⭐ <span id="score">0</span> / 19</div>
       <div class="progress" aria-label="score progress"><div class="progress-fill" id="progressFill"></div></div>
       <div id="rank">Start!</div>
     </section>
+    <p class="audio-status" id="audioStatus" role="status"></p>
 
     <section class="panel level">
       <div class="level-title">
         <div>
-          <h2>Level 1: Meet Letter Q</h2>
-          <p>Listen carefully. Q has a special sound.</p>
+          <h2>Level 1: Meet Letter Y</h2>
+          <p>Listen carefully. Y has a special sound.</p>
         </div>
         <span class="badge">4 stars</span>
       </div>
 
-      <div class="question" data-answer="queen" data-audio="Listen. Which word starts with letter Q?">
-        <div class="prompt"><span class="num">1</span>Listen. Which word starts with letter Q?</div>
+      <div class="question" data-answer="yoyo" data-audio="Listen carefully. Which word starts with letter Y?">
+        <div class="prompt"><span class="num">1</span>Listen. Which word starts with letter Y?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">queen</button>
+          <button class="option" type="button">yoyo</button>
           <button class="option" type="button">duck</button>
           <button class="option" type="button">fox</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="Q" data-audio="Can you find the big letter Q?">
-        <div class="prompt"><span class="num">2</span>Can you find the big letter Q?</div>
+      <div class="question" data-answer="Y" data-audio="Look carefully. Can you find the big letter Y?">
+        <div class="prompt"><span class="num">2</span>Can you find the big letter Y?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">O</button>
-          <button class="option" type="button">Q</button>
-          <button class="option" type="button">D</button>
+          <button class="option" type="button">V</button>
+          <button class="option" type="button">Y</button>
+          <button class="option" type="button">X</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="q" data-audio="Can you find little q?">
-        <div class="prompt"><span class="num">3</span>Can you find little q?</div>
+      <div class="question" data-answer="y" data-audio="Look carefully. Can you find little y?">
+        <div class="prompt"><span class="num">3</span>Can you find little y?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">p</button>
-          <button class="option" type="button">q</button>
+          <button class="option" type="button">v</button>
           <button class="option" type="button">g</button>
+          <button class="option" type="button">y</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="Q is in queen." data-audio="Listen. Which sentence has a word with letter Q?">
-        <div class="prompt"><span class="num">4</span>Choose the sentence with letter Q.</div>
+      <div class="question" data-answer="Y is in yoyo." data-audio="Listen carefully. Which sentence has a word with letter Y?">
+        <div class="prompt"><span class="num">4</span>Choose the sentence with letter Y.</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">Q is in queen.</button>
           <button class="option" type="button">D is in duck.</button>
-          <button class="option" type="button">X is in box.</button>
+          <button class="option" type="button">Y is in yoyo.</button>
+          <button class="option" type="button">F is in fish.</button>
         </div>
         <div class="feedback"></div>
       </div>
@@ -624,52 +646,52 @@
     <section class="panel level">
       <div class="level-title">
         <div>
-          <h2>Level 2: Q Sound Word Hunt</h2>
-          <p>Pick the word with the Q sound.</p>
+          <h2>Level 2: Y Sound Word Hunt</h2>
+          <p>Pick the word with the Y sound.</p>
         </div>
         <span class="badge">4 stars</span>
       </div>
 
-      <div class="question" data-answer="queen" data-audio="Which word starts with the Q sound?">
-        <div class="prompt"><span class="num">5</span>Which word starts with the Q sound?</div>
+      <div class="question" data-answer="yard" data-audio="Listen carefully. Which word starts with the Y sound?">
+        <div class="prompt"><span class="num">5</span>Which word starts with the Y sound?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">fish</button>
-          <button class="option" type="button">queen</button>
+          <button class="option" type="button">yard</button>
+          <button class="option" type="button">cat</button>
           <button class="option" type="button">sun</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="quiet" data-audio="Which word starts with the Q sound?">
-        <div class="prompt"><span class="num">6</span>Which word starts with the Q sound?</div>
+      <div class="question" data-answer="yummy" data-audio="Listen carefully. Which word starts with the Y sound?">
+        <div class="prompt"><span class="num">6</span>Which word starts with the Y sound?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
           <button class="option" type="button">apple</button>
+          <button class="option" type="button">yummy</button>
           <button class="option" type="button">dog</button>
-          <button class="option" type="button">quiet</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="quilt" data-audio="Which word starts with the Q sound?">
-        <div class="prompt"><span class="num">7</span>Which word starts with the Q sound?</div>
+      <div class="question" data-answer="yogurt" data-audio="Listen carefully. Which word starts with the Y sound?">
+        <div class="prompt"><span class="num">7</span>Which word starts with the Y sound?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">quilt</button>
-          <button class="option" type="button">ball</button>
           <button class="option" type="button">moon</button>
+          <button class="option" type="button">fish</button>
+          <button class="option" type="button">yogurt</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="question" data-audio="Which word starts with the Q sound?">
-        <div class="prompt"><span class="num">8</span>Which word starts with the Q sound?</div>
+      <div class="question" data-answer="yarn" data-audio="Listen carefully. Which word starts with the Y sound?">
+        <div class="prompt"><span class="num">8</span>Which word starts with the Y sound?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
+          <button class="option" type="button">ball</button>
+          <button class="option" type="button">yarn</button>
           <button class="option" type="button">rabbit</button>
-          <button class="option" type="button">question</button>
-          <button class="option" type="button">tiger</button>
         </div>
         <div class="feedback"></div>
       </div>
@@ -679,46 +701,46 @@
       <div class="level-title">
         <div>
           <h2>Level 3: Same or Different?</h2>
-          <p>Listen for the Q sound. It is not the same as the X sound.</p>
+          <p>Listen for the Y sound. It is not the same as the J sound.</p>
         </div>
         <span class="badge">4 stars</span>
       </div>
 
-      <div class="question" data-answer="quilt" data-audio="Which word has the same beginning sound as queen?">
-        <div class="prompt"><span class="num">9</span>Which word has the same beginning sound as queen?</div>
+      <div class="question" data-answer="yard" data-audio="Listen carefully. Which word has the same beginning sound as yoyo?">
+        <div class="prompt"><span class="num">9</span>Which word has the same beginning sound as yoyo?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
+          <button class="option" type="button">jam</button>
+          <button class="option" type="button">yard</button>
+          <button class="option" type="button">moon</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="yogurt" data-audio="Listen carefully. Which word starts with the Y sound, not the J sound?">
+        <div class="prompt"><span class="num">10</span>Which word starts with the Y sound, not the J sound?</div>
+        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
+        <div class="options">
+          <button class="option" type="button">yogurt</button>
+          <button class="option" type="button">jam</button>
+          <button class="option" type="button">juice</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="yummy" data-audio="Listen carefully. Which word begins with letter Y?">
+        <div class="prompt"><span class="num">11</span>Which word begins with letter Y?</div>
+        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
+        <div class="options">
+          <button class="option" type="button">jump</button>
+          <button class="option" type="button">yummy</button>
           <button class="option" type="button">duck</button>
-          <button class="option" type="button">quilt</button>
-          <button class="option" type="button">box</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="quiet" data-audio="Which word has the Q sound, not the X sound?">
-        <div class="prompt"><span class="num">10</span>Which word has the Q sound, not the X sound?</div>
-        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
-        <div class="options">
-          <button class="option" type="button">fox</button>
-          <button class="option" type="button">quiet</button>
-          <button class="option" type="button">box</button>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="quail" data-audio="Which word begins with letter Q?">
-        <div class="prompt"><span class="num">11</span>Which word begins with letter Q?</div>
-        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
-        <div class="options">
-          <button class="option" type="button">whale</button>
-          <button class="option" type="button">nail</button>
-          <button class="option" type="button">quail</button>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="beginning" data-audio="In queen, where do you hear the Q sound?">
-        <div class="prompt"><span class="num">12</span>In queen, where do you hear the Q sound?</div>
+      <div class="question" data-answer="beginning" data-audio="Listen carefully. In yoyo, where do you hear the Y sound?">
+        <div class="prompt"><span class="num">12</span>In yoyo, where do you hear the Y sound?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
           <button class="option" type="button">middle</button>
@@ -732,56 +754,32 @@
     <section class="panel level">
       <div class="level-title">
         <div>
-          <h2>Level 4: Picture Word Match</h2>
-          <p>Look at the picture. Choose the word or sentence.</p>
+          <h2>Level 4: In the Yard Picture Story</h2>
+          <p>Look at the lesson picture. Choose the answer.</p>
         </div>
-        <span class="badge">4 stars</span>
+        <span class="badge">2 stars</span>
       </div>
 
-      <div class="question" data-answer="queen" data-audio="Look at the picture. Who is she?">
-        <div class="prompt"><span class="num">13</span>Look at the picture. Who is she?</div>
+      <div class="question" data-answer="a yellow yoyo" data-audio="Look at the picture carefully. What did Yuki get?">
+        <div class="prompt"><span class="num">13</span>Look at the picture. What did Yuki get?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
-        <div class="picture-card" aria-hidden="true"><div class="picture-icon">👑</div><div class="picture-label">A queen with a crown</div></div>
+        <div class="picture-card"><img class="lesson-image" src="assets/letter-y/story-yellow-yoyo.png" alt="Yuki got a yellow yoyo"></div>
         <div class="options">
-          <button class="option" type="button">duck</button>
-          <button class="option" type="button">queen</button>
-          <button class="option" type="button">fish</button>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="quiet" data-audio="Look at the picture. What word is it?">
-        <div class="prompt"><span class="num">14</span>Look at the picture. What word is it?</div>
-        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
-        <div class="picture-card" aria-hidden="true"><div class="picture-icon">🤫</div><div class="picture-label">Shhh. Be quiet.</div></div>
-        <div class="options">
-          <button class="option" type="button">loud</button>
-          <button class="option" type="button">quiet</button>
-          <button class="option" type="button">happy</button>
+          <button class="option" type="button">a yellow yoyo</button>
+          <button class="option" type="button">a red ball</button>
+          <button class="option" type="button">a blue bag</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="question" data-audio="Look at the picture. What word is it?">
-        <div class="prompt"><span class="num">15</span>Look at the picture. What word is it?</div>
+      <div class="question" data-answer="yogurt" data-audio="Look at the picture carefully. What did Yuki eat?">
+        <div class="prompt"><span class="num">14</span>Look at the picture. What did Yuki eat?</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
-        <div class="picture-card" aria-hidden="true"><div class="picture-icon">?</div><div class="picture-label">Question time</div></div>
+        <div class="picture-card"><img class="lesson-image" src="assets/letter-y/story-ate-yogurt.png" alt="Yuki ate the yogurt in the yard"></div>
         <div class="options">
-          <button class="option" type="button">answer</button>
-          <button class="option" type="button">question</button>
-          <button class="option" type="button">circle</button>
-        </div>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="question" data-answer="The queen has a question." data-audio="Choose the sentence for the picture.">
-        <div class="prompt"><span class="num">16</span>Choose the sentence for the picture.</div>
-        <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
-        <div class="picture-card" aria-hidden="true"><div class="picture-icon">👑?</div><div class="picture-label">The queen has a question.</div></div>
-        <div class="options">
-          <button class="option" type="button">The duck has a ball.</button>
-          <button class="option" type="button">The queen has a question.</button>
-          <button class="option" type="button">The fish is quiet.</button>
+          <button class="option" type="button">carrots</button>
+          <button class="option" type="button">yogurt</button>
+          <button class="option" type="button">bread</button>
         </div>
         <div class="feedback"></div>
       </div>
@@ -790,63 +788,63 @@
     <section class="panel level">
       <div class="level-title">
         <div>
-          <h2>Level 5: Q Word Listening Challenge</h2>
-          <p>Listen to the word. Choose the letters you hear.</p>
+          <h2>Level 5: Y Word Listening Challenge</h2>
+          <p>Listen to the word. Choose the CVC word you hear.</p>
         </div>
         <span class="badge">5 stars</span>
       </div>
 
-      <div class="question" data-answer="q-u-e-e-n" data-audio="Choose the letters for queen.">
-        <div class="prompt"><span class="num">17</span>Listen. Choose the letters.</div>
+      <div class="question" data-answer="yak" data-audio="Listen carefully. Choose the word yak. Yak. Yak.">
+        <div class="prompt"><span class="num">15</span>Listen. Choose the word.</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">q-u-e-e-n</button>
-          <button class="option" type="button">d-u-c-k</button>
-          <button class="option" type="button">f-i-s-h</button>
+          <button class="option" type="button">yak</button>
+          <button class="option" type="button">yam</button>
+          <button class="option" type="button">yes</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="q-u-i-e-t" data-audio="Choose the letters for quiet.">
-        <div class="prompt"><span class="num">18</span>Listen. Choose the letters.</div>
+      <div class="question" data-answer="yam" data-audio="Listen carefully. Choose the word yam. Yam. Yam.">
+        <div class="prompt"><span class="num">16</span>Listen. Choose the word.</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">c-a-t</button>
-          <button class="option" type="button">q-u-i-e-t</button>
-          <button class="option" type="button">d-o-g</button>
+          <button class="option" type="button">yap</button>
+          <button class="option" type="button">yes</button>
+          <button class="option" type="button">yam</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="q-u-i-l-t" data-audio="Choose the letters for quilt.">
-        <div class="prompt"><span class="num">19</span>Listen. Choose the letters.</div>
+      <div class="question" data-answer="yes" data-audio="Listen carefully. Choose the word yes. Yes. Yes.">
+        <div class="prompt"><span class="num">17</span>Listen. Choose the word.</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">s-u-n</button>
-          <button class="option" type="button">b-a-g</button>
-          <button class="option" type="button">q-u-i-l-t</button>
+          <button class="option" type="button">yet</button>
+          <button class="option" type="button">yes</button>
+          <button class="option" type="button">yak</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="q-u-a-i-l" data-audio="Choose the letters for quail.">
-        <div class="prompt"><span class="num">20</span>Listen. Choose the letters.</div>
+      <div class="question" data-answer="yet" data-audio="Listen carefully. Choose the word yet. Yet. Yet.">
+        <div class="prompt"><span class="num">18</span>Listen. Choose the word.</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">q-u-a-i-l</button>
-          <button class="option" type="button">h-e-n</button>
-          <button class="option" type="button">p-i-g</button>
+          <button class="option" type="button">yam</button>
+          <button class="option" type="button">yap</button>
+          <button class="option" type="button">yet</button>
         </div>
         <div class="feedback"></div>
       </div>
 
-      <div class="question" data-answer="q-u-a-r-t-e-r" data-audio="Choose the letters for quarter.">
-        <div class="prompt"><span class="num">21</span>Listen. Choose the letters.</div>
+      <div class="question" data-answer="yap" data-audio="Listen carefully. Choose the word yap. Yap. Yap.">
+        <div class="prompt"><span class="num">19</span>Listen. Choose the word.</div>
         <div class="listen-row"><button class="listen-btn" type="button">Listen</button></div>
         <div class="options">
-          <button class="option" type="button">m-a-p</button>
-          <button class="option" type="button">b-o-x</button>
-          <button class="option" type="button">q-u-a-r-t-e-r</button>
+          <button class="option" type="button">yap</button>
+          <button class="option" type="button">yak</button>
+          <button class="option" type="button">yes</button>
         </div>
         <div class="feedback"></div>
       </div>
@@ -857,7 +855,7 @@
       <div>
         <h2 id="resultTitle">Great work!</h2>
         <div class="star-rating" id="starRating" aria-label="star rating"></div>
-        <div class="result-score">Score: <span id="finalScore">0</span> / 21 · <span id="finalStars">0</span> / 5 stars</div>
+        <div class="result-score">Score: <span id="finalScore">0</span> / 19 · <span id="finalStars">0</span> / 5 stars</div>
         <p class="result-cheer" id="resultCheer"></p>
         <p id="resultText"></p>
       </div>
@@ -875,7 +873,7 @@
   </main>
 
   <script>
-    const total = 21;
+    const total = 19;
     const scoreEl = document.getElementById("score");
     const finalScoreEl = document.getElementById("finalScore");
     const progressFill = document.getElementById("progressFill");
@@ -886,10 +884,12 @@
     const resultCheer = document.getElementById("resultCheer");
     const starRating = document.getElementById("starRating");
     const finalStarsEl = document.getElementById("finalStars");
+    const audioStatus = document.getElementById("audioStatus");
     let currentListenButton = null;
     let availableVoices = [];
     let voiceLoadPromise = null;
     let speechResetTimer = null;
+    let speechStartTimer = null;
 
     function loadVoices() {
       if (!("speechSynthesis" in window)) {
@@ -992,6 +992,11 @@
         speechResetTimer = null;
       }
 
+      if (speechStartTimer) {
+        window.clearTimeout(speechStartTimer);
+        speechStartTimer = null;
+      }
+
       if (currentListenButton) {
         resetListenButton(currentListenButton);
         currentListenButton = null;
@@ -1004,9 +1009,9 @@
       finalScoreEl.textContent = correctCount;
       progressFill.style.width = `${(correctCount / total) * 100}%`;
 
-      if (correctCount >= 18) {
-        rankEl.textContent = "X Star!";
-      } else if (correctCount >= 13) {
+      if (correctCount >= 16) {
+        rankEl.textContent = "Y Star!";
+      } else if (correctCount >= 11) {
         rankEl.textContent = "Sound Hunter!";
       } else {
         rankEl.textContent = "Keep going!";
@@ -1015,6 +1020,7 @@
 
     async function speakDirection(text) {
       if (!("speechSynthesis" in window)) {
+        showAudioHelp();
         return;
       }
 
@@ -1033,8 +1039,19 @@
       }
 
       utterance.onend = finishSpeaking;
-      utterance.onerror = finishSpeaking;
+      utterance.onerror = () => {
+        showAudioHelp();
+        finishSpeaking();
+      };
+      utterance.onstart = () => {
+        audioStatus.classList.remove("show");
+        if (speechStartTimer) {
+          window.clearTimeout(speechStartTimer);
+          speechStartTimer = null;
+        }
+      };
       speechResetTimer = window.setTimeout(finishSpeaking, 12000);
+      speechStartTimer = window.setTimeout(showAudioHelp, 2500);
 
       window.speechSynthesis.resume();
       window.speechSynthesis.speak(utterance);
@@ -1045,10 +1062,16 @@
       button.disabled = false;
     }
 
+    function showAudioHelp() {
+      audioStatus.textContent = "No sound? Please open this page in Chrome and tap Listen again.";
+      audioStatus.classList.add("show");
+    }
+
     function playDirection(question, button) {
       const text = question.dataset.audio || question.querySelector(".prompt").textContent;
 
       if (!("speechSynthesis" in window)) {
+        showAudioHelp();
         return;
       }
 
@@ -1090,7 +1113,7 @@
         feedback.className = "feedback right";
       } else {
         button.classList.add("incorrect");
-        feedback.textContent = "Try again. Listen for the Q sound.";
+        feedback.textContent = "Try again. Listen for the Y sound.";
         feedback.className = "feedback wrong";
       }
 
@@ -1111,18 +1134,18 @@
         starRating.appendChild(star);
       }
 
-      if (score >= 18) {
-        resultTitle.textContent = "Amazing! You found letter Q!";
-        resultCheer.textContent = "Super Q sound listening!";
-        resultText.textContent = "You can hear and spell Q words like queen, quiet, question, quilt, and quail.";
-      } else if (score >= 13) {
+      if (score >= 16) {
+        resultTitle.textContent = "Amazing! You found letter Y!";
+        resultCheer.textContent = "Super Y sound listening!";
+        resultText.textContent = "You can hear and spell Y words like yoyo, yard, yummy, yogurt, and yarn.";
+      } else if (score >= 11) {
         resultTitle.textContent = "Good job! Keep practicing!";
         resultCheer.textContent = "You are getting stronger!";
-        resultText.textContent = "Say and spell queen, quiet, question, quilt, and quail three more times.";
+        resultText.textContent = "Say and spell yoyo, yard, yummy, yogurt, and yarn three more times.";
       } else {
         resultTitle.textContent = "Nice try! Let’s play again!";
         resultCheer.textContent = "Keep going, little sound hunter!";
-        resultText.textContent = "Listen carefully for the Q sound.";
+        resultText.textContent = "Listen carefully for the Y sound.";
       }
 
       resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
